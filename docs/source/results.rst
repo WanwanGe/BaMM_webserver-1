@@ -76,7 +76,7 @@ calculated for positives:negative=1:1 and we name it as **dataset AvRec**. In ad
 for the case where positives:negatives=1:10, a dash curve for it will be depicted on the plot.
 Additionally, the p-value density plot is shown, which indicates how we define each term.
 
-(Note that **dataset AvRec** is used as the **zoops_score** for motif reranking in the seeding phase.)
+.. note:: **dataset AvRec** is used as the **zoops_score** for motif reranking in the seeding phase.
 
 Besides, given the p-value distribution from both input and background sequences, we use the `fdrtool` :cite:`strimmer2008fdrtool` to re-estimate
 the null distribution and the ratio between positives and negatives, which is shown by the orange dash line

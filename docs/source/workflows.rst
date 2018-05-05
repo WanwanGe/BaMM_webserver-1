@@ -15,7 +15,6 @@ The BaMM webserver offers four workflows for analyzing regulatory motifs. In the
 De-novo motif discovery
 ***********************
 
-
 .. image:: img/denovo_icon.png
   :width: 200px
   :align: center
@@ -30,8 +29,6 @@ We also offer a second, slightly more complex workflow, that reports possible se
 .. image:: img/manual_workflow_button.png
   :width: 200px
   :align: center
-  
-
 
 .. _usage_section:
 
@@ -40,11 +37,15 @@ Usage
 
 In its simplest form, the de-novo motif discovery workflow requires a fasta file with sequences and reports up to four higher-order models.
 
-By clicking on the ``Advanced 0ptions``, the user can choose a wide variety of additional settings and parameters organized into four subgroups: general settings, seeding stage, refinement stage and settings for further analyses.
+Input sequence
+--------------
+
+.. note:: It requires minimum 10 sequences as input for searching and refining motifs. If you have only a few but long sequences, and they might contain more than one motif per sequence. It is highly suggested to truncate them into short sequences before uploading the file.
+
+By clicking on the ``Advanced Options``, the user can choose a wide variety of additional settings and parameters organized into four subgroups: general settings, seeding stage, refinement stage and settings for further analyses.
 
 General settings
 ----------------
-
 
 .. image:: img/denovo_general_settings.png
   :width: 400px
@@ -103,7 +104,7 @@ Model Order
         order of the Markov model. Models with high orders are more time consuming to train.
 
 Flank extension
-        extend the core seed by extra positions to the left and the right. Can be used to learn weakly informative flanking regions.
+        extend the core seed by extra positions to the left and the right. It can be used to learn weakly informative flanking regions.
 
 
 Settings for further analyses
@@ -152,7 +153,7 @@ Motif database
   :width: 100px
   :align: center
 
-Our motif databases consists of over 1000 4th-order BaMM, trained on ChIP-seq peaks collected by the `GTRD project <http://gtrd.biouml.org/>`_ :cite:`yevshin2016gtrd`.
+Our motif databases consists of over a thousand 4th-order BaMM, trained on ChIP-seq peaks collected by the `GTRD project <http://gtrd.biouml.org/>`_ :cite:`yevshin2016gtrd`.
 
 The BaMMs fall into following sub-collections:
 

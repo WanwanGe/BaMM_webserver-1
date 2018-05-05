@@ -51,3 +51,15 @@ then likewise the second-order estimate will fall back on the first-order estima
 In this way, higher-order dependencies are only learned for the fraction of
 k-mer contexts that occur sufficiently often at one position j in the motif’s training instances to trump the
 pseudo-counts. Throughout this work we set :math:`\alpha_0 = 1` and :math:`\alpha_k = 20 × 3^k − 1`.
+
+ZOOPS model
+***********
+
+BaMM searches motifs under the assumption that there is zero or one motif per sequence (``zoops`` model).
+
+Runtime on large dataset
+************************
+
+Currently, it takes 3 (12.5) minutes for a motif discovery run with 10k (100k) sequences of length ~200 nt (both strands) on 4 cores. This also includes motif scanning, motif evaluation and motif-motif search for the top 3 discovered motifs.
+
+.. tip:: The most time-critical code is parallelized using openMP. So if you download the server locally, you can tune ``N_CORES_PER_JOB`` setting ( `here <https://github.com/soedinglab/BaMM_webserver/blob/master/.env_template>`_ ) in order to run even faster for large dataset.
